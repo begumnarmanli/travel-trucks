@@ -31,7 +31,7 @@ const Filters = ({ onFilterSubmit }) => {
   }, [isDrawerOpen]);
   const { handleSubmit, control, setValue, getValues } = useForm({
     defaultValues: {
-      location: "Kyiv, Ukraine",
+      location: "",
       equipment: {
         AC: false,
         transmission: false,
@@ -83,7 +83,6 @@ const Filters = ({ onFilterSubmit }) => {
         <h3 className={styles.groupTitle}>Vehicle equipment</h3>
         <hr className={styles.divider} />
         <div className={styles.grid}>
-          {/* AC */}
           <div
             className={`${styles.card} ${
               equipment?.AC ? styles.cardSelected : ""
@@ -194,7 +193,7 @@ const Filters = ({ onFilterSubmit }) => {
                 <input
                   {...field}
                   className={styles.locationInput}
-                  placeholder="City"
+                  placeholder="Kyiv, Ukraine"
                 />
               )}
             />

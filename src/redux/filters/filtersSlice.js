@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  location: "Kyiv, Ukraine",
+  location: "",
   equipment: {
     AC: false,
     transmission: false,

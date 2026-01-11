@@ -84,8 +84,9 @@
 .meta {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 12px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .rating,
@@ -93,6 +94,20 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  font-size: 14px;
+}
+
+.location {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rating img,
+.location img {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
 }
 
 .description {
@@ -238,6 +253,11 @@
 
   .rating {
     gap: 4px;
+    font-size: 16px;
+  }
+
+  .location {
+    font-size: 16px;
   }
 
   .meta {
