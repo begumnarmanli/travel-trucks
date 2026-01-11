@@ -1,0 +1,42 @@
+.notification {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d1fadf;
+  color: #027a48;
+  border: 1px solid #6ce9a6;
+  padding: 16px 48px 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10000;
+  min-width: 320px;
+  max-width: 90%;
+  display: flex;
+  align-items: center;
+  animation: slideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #027a48;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+}
+
+@keyframes slideIn {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 10px;
+    opacity: 1;
+  }
+}

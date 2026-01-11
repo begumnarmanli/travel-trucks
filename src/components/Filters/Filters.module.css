@@ -1,0 +1,318 @@
+.form {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.locationSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  color: var(--location-grey);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.locationInput {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 14px 14px 14px 44px;
+  font-size: 16px;
+  background-color: var(--light-white);
+  border-radius: 12px;
+  border: none;
+  outline: none;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 14px;
+  width: 18px;
+  height: 18px;
+}
+
+.filtersButton {
+  display: block;
+  background-color: var(--light-white);
+  color: var(--main-dark);
+  padding: 14px 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.filtersButton:hover {
+  background-color: #f5f5f5;
+  border-color: var(--primary-red);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filtersButton:active {
+  transform: scale(0.98);
+}
+
+.desktopFilters {
+  display: none;
+}
+
+.filtersLabel {
+  color: var(--main-grey);
+  font-weight: 500;
+  margin-bottom: -18px;
+}
+
+.groupTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--main-dark);
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid rgba(16, 24, 40, 0.1);
+  margin: 24px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  width: 80%;
+}
+
+.card {
+  height: 95px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: var(--white);
+}
+
+.card:hover {
+  border-color: var(--primary-red);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.15);
+}
+
+.cardSelected {
+  border-color: var(--primary-red);
+}
+
+.card span {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+}
+
+.card img {
+  width: 32px;
+  height: 32px;
+}
+
+.drawerOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--white);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.3s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.drawerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(16, 24, 40, 0.1);
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+  z-index: 1;
+}
+
+.drawerTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--main-dark);
+  margin: 0;
+}
+
+.drawerClose {
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: var(--main-grey);
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+  line-height: 1;
+}
+
+.drawerClose:hover {
+  color: var(--primary-red);
+}
+
+.drawerContent {
+  padding: 24px;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.drawerContent .grid {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.drawerContent .filterGroup {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.drawerSearchBtn {
+  background-color: var(--primary-red);
+  color: var(--white);
+  padding: 16px;
+  border-radius: 200px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+}
+
+.drawerSearchBtn:hover {
+  background-color: var(--hover-red);
+}
+
+.drawerSearchBtn:active {
+  transform: scale(0.98);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .label {
+    font-size: 20px;
+  }
+
+  .locationInput {
+    font-size: 18px;
+  }
+
+  .filtersLabel {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .filtersButton {
+    display: none;
+  }
+
+  .divider {
+    margin: 20px 0;
+  }
+
+  .desktopFilters {
+    display: block;
+  }
+
+  .inputWrapper {
+    max-width: 360px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: 112px;
+  }
+
+  .card span {
+    max-width: 80px;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.2;
+  }
+}

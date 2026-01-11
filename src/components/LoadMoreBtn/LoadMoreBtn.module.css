@@ -1,0 +1,35 @@
+.loadMoreBtnWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1024px) {
+  .loadMoreBtnWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 52px;
+  }
+
+  .loadMoreBtnWrapper button {
+    width: 166px;
+    height: 56px;
+    padding: 16px 60px;
+    border-radius: 200px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--main-dark);
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+}

@@ -1,0 +1,245 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.metaRow {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.ratingText {
+  font-size: 16px;
+  line-height: 24px;
+  color: black;
+  border-bottom: 2px solid black;
+  padding-bottom: 1px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.locationInfo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.locationIcon {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.locationText {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #101828;
+}
+
+.priceTag {
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.galleryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.galleryItem {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.galleryImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description {
+  font-size: 16px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.tabBtn.active {
+  border-bottom: 4px solid var(--primary-red);
+}
+
+.tabBtn {
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 12px;
+  color: var(--main-color);
+  background-color: transparent;
+  border: none;
+  border-bottom: 4px solid transparent;
+}
+
+.tabs {
+  display: flex;
+  gap: 20px;
+  margin-top: 24px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.contentGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.badgeList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f2f4f7;
+  padding: 12px 18px;
+  border-radius: 100px;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #101828;
+}
+
+.badge img {
+  width: 20px;
+  height: 20px;
+}
+
+.featuresSide {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+
+.reviewsSide {
+  background-color: transparent;
+  padding: 24px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 36px;
+  }
+
+  .metaRow {
+    font-size: 18px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .locationText {
+    font-size: 18px;
+  }
+
+  .priceTag {
+    font-size: 18px;
+  }
+
+  .galleryContainer {
+    flex-direction: row;
+  }
+
+  .galleryItem {
+    width: 220px;
+    height: 235px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .tabBtn {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 64px;
+    margin-top: 48px;
+  }
+
+  .headerContent {
+    gap: 8px;
+    margin: 0;
+  }
+
+  .metaRow {
+    font-size: 16px;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .locationText {
+    font-size: 16px;
+  }
+
+  .priceTag {
+    font-size: var(--h2-size);
+  }
+
+  .galleryContainer {
+    margin-top: 28px;
+    gap: 48px;
+  }
+
+  .description {
+    margin-top: 28px;
+    margin-bottom: 60px;
+  }
+
+  .tabs {
+    gap: 40px;
+    margin: 0;
+    margin-bottom: 44px;
+  }
+
+  .tabBtn {
+    padding-bottom: 24px;
+  }
+
+  .contentGrid {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 0;
+  }
+
+  .featuresSide {
+    flex: 1;
+    min-width: 631px;
+    padding: 44px 52px;
+  }
+
+  .bookingSide {
+    width: 641px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 24px;
+  }
+}

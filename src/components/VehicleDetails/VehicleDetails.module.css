@@ -1,0 +1,51 @@
+.vehicleDetails h3 {
+  font-size: 20px;
+}
+
+.vehicleDetails {
+  padding: 0 10px;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #101828;
+}
+
+.detailRow span:last-child {
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .vehicleDetails {
+    padding: 0 16px;
+  }
+
+  .vehicleDetails h3 {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .detailRow {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .vehicleDetails {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .detailRow {
+    padding: 16px 0;
+  }
+}

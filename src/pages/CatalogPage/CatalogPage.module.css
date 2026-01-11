@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.catalogPage {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sidebar {
+  width: 100%;
+}
+
+.mainContent {
+  width: 100%;
+}
+
+.notFoundWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 40px;
+    gap: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    gap: 64px;
+    padding: 64px;
+  }
+
+  .sidebar {
+    width: 360px;
+    flex-shrink: 0;
+  }
+
+  .mainContent {
+    flex-grow: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .camperCard {
+    width: 100%;
+    max-width: 888px;
+    height: 368px;
+    flex-direction: row;
+    display: flex;
+  }
+}

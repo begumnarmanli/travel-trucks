@@ -1,0 +1,154 @@
+:root {
+  /* Renkler */
+  --primary-red: #e44848;
+  --hover-red: #d84343;
+  --main-dark: #101828;
+  --main-grey: #475467;
+  --location-grey: #6c717b;
+  --light-white: #f7f7f7;
+  --white: #ffffff;
+  --star-yellow: #ffc531;
+  --border-color: #dadde1;
+  --nav-bg: #f7f7f7;
+  --nav-padding-y: 16px;
+
+  /* Font */
+  --main-family: "Inter", sans-serif;
+
+  /* Boyutlar */
+  --h1-size: 32px;
+  --h2-size: 20px;
+  --gap-catalog: 16px;
+  --gap-gallery: 20px;
+  --container-padding: 20px;
+}
+
+/* Global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--main-family);
+  color: var(--main-dark);
+  background-color: var(--white);
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+h1 {
+  font-size: var(--h1-size);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: var(--h2-size);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btnBase {
+  min-width: 120px;
+  height: 40px;
+  padding: 10px 20px;
+  border-radius: 200px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: inherit;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btnPrimary {
+  background-color: var(--primary-red);
+  color: var(--light-white);
+}
+
+.btnPrimary:hover {
+  background-color: var(--hover-red);
+}
+
+/* Load More için Outline */
+.btnOutline {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--main-dark);
+}
+
+.btnOutline:hover {
+  border-color: var(--hover-red);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --h1-size: 40px;
+    --h2-size: 22px;
+    --gap-catalog: 24px;
+    --gap-gallery: 32px;
+    --container-padding: 40px;
+  }
+  .btnBase {
+    min-width: 145px;
+    height: 56px;
+    padding: 16px 32px;
+    margin: 20px auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --h1-size: 48px;
+    --h2-size: 24px;
+    --gap-catalog: 32px;
+    --gap-gallery: 48px;
+    --container-padding: 64px;
+    --nav-padding-y: 24px;
+  }
+
+  .btnBase {
+    width: 166px;
+    height: 56px;
+    padding: 16px 60px;
+    min-width: 166px;
+    border-radius: 200px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+  }
+}

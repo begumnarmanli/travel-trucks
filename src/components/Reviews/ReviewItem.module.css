@@ -1,0 +1,112 @@
+.reviewWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f2f4f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-red);
+  font-size: 20px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #101828;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.starFilled,
+.starEmpty {
+  width: 12px;
+  height: 12px;
+}
+
+.starEmpty {
+  filter: grayscale(100%) opacity(0.2);
+}
+
+.comment {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--main-grey);
+}
+
+@media (min-width: 768px) {
+  .reviewWrapper {
+    margin-bottom: 36px;
+    gap: 16px;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .starFilled,
+  .starEmpty {
+    width: 15px;
+    height: 15px;
+  }
+
+  .comment {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .reviewWrapper {
+    margin-bottom: 44px;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .starFilled,
+  .starEmpty {
+    width: 16px;
+    height: 16px;
+  }
+
+  .comment {
+    font-size: 16px;
+  }
+}

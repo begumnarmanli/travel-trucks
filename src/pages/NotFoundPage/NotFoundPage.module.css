@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  text-align: center;
+}
+
+.image {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--main-dark);
+  margin-bottom: 10px;
+}
+
+.message {
+  font-size: 16px;
+  color: var(--main-grey);
+  line-height: 1.5;
+}
+
+.backButton {
+  margin-top: 24px;
+  padding: 12px 24px;
+  background-color: var(--primary-red);
+  color: var(--white);
+  border: none;
+  border-radius: 200px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: var(--hover-red);
+}
+
+@media (min-width: 1024px) {
+  .backButton {
+    display: none;
+  }
+}

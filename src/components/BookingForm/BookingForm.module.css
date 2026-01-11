@@ -1,0 +1,208 @@
+.bookingCard {
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+  padding: 24px;
+  background-color: #fff;
+}
+
+.bookingCard h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #101828;
+}
+
+.bookingCard p {
+  color: #6c717b;
+  margin-bottom: 24px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 18px;
+  margin-bottom: 14px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f7f8fa;
+  font-size: 16px;
+  outline: none;
+}
+
+.textarea {
+  height: 100px;
+  resize: none;
+}
+
+:global(.react-datepicker) {
+  font-family: "Inter", sans-serif;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+}
+
+:global(.react-datepicker__header) {
+  background-color: var(--white);
+  border-bottom: none;
+}
+
+:global(.react-datepicker__day) {
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+:global(.react-datepicker .react-datepicker__day--selected),
+:global(.react-datepicker .react-datepicker__day--keyboard-selected) {
+  background-color: var(--main-grey);
+  color: white;
+  border: 1px solid var(--main-grey);
+}
+
+:global(.react-datepicker .react-datepicker__day--today) {
+  border: 1px solid var(--main-grey);
+  font-weight: bold;
+}
+
+:global(
+    .react-datepicker
+      .react-datepicker__day--today:not(.react-datepicker__day--selected):not(
+        .react-datepicker__day--keyboard-selected
+      )
+  ) {
+  background-color: transparent;
+  color: #101828;
+}
+
+:global(.react-datepicker .react-datepicker__day:hover) {
+  background-color: var(--main-grey);
+  color: white;
+  border-radius: 50%;
+}
+
+:global(.react-datepicker .react-datepicker__day--selected:hover) {
+  background-color: var(--main-grey);
+}
+
+.datePickerWrapper,
+.datePickerWrapper :global(.react-datepicker-wrapper) {
+  width: 100%;
+}
+
+.sendBtn {
+  display: block;
+  margin: 0 auto;
+  background-color: var(--primary-red);
+  color: white;
+  padding: 16px 60px;
+  border: none;
+  border-radius: 200px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sendBtn:hover {
+  background-color: var(--hover-red);
+}
+
+@media (min-width: 768px) {
+  .bookingCard h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .bookingCard p {
+    font-size: 18px;
+  }
+
+  .input,
+  .textarea {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  :global(.react-datepicker) {
+    transform: scale(1.05);
+    transform-origin: top center;
+    margin-top: 10px;
+  }
+
+  :global(.react-datepicker__day-name),
+  :global(.react-datepicker__day),
+  :global(.react-datepicker__time-name) {
+    width: 34px;
+    line-height: 30px;
+    margin: 0.3rem;
+  }
+
+  :global(.react-datepicker__current-month) {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .sendBtn {
+    padding: 18px 80px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bookingCard {
+    width: 100%;
+    padding: 44px 57px;
+  }
+
+  .bookingCard h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .bookingCard p {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .input .textarea {
+    padding: 18px 18px;
+  }
+
+  .bookingCard :global(.react-datepicker) {
+    transform: scale(1);
+    width: 276px;
+    height: 284px;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bookingCard :global(.react-datepicker__day-name),
+  .bookingCard :global(.react-datepicker__day) {
+    width: 36px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+
+  .bookingCard :global(.react-datepicker__current-month) {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    margin-top: 4px;
+  }
+
+  .bookingCard :global(.react-datepicker__day-names) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--main-grey);
+    margin-bottom: 12px;
+  }
+
+  .sendBtn {
+    margin-top: 24px;
+    width: fit-content;
+    padding: 16px 60px;
+  }
+}
