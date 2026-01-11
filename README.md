@@ -34,3 +34,10 @@ TravelTrucks is a modern React application designed for discovering and booking 
    npm install
    npm run dev
    ```
+
+   ---
+
+## ✍️ Author
+
+---
+### Developed by Begüm Narmanlı
